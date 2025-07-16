@@ -1,16 +1,51 @@
 ---
-
+import Layout from "../layouts/Layout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>hello world!</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <main class="flex flex-col items-center w-full gap-8 justify-center h-full">
+    <!-- Main Outlined Box -->
+    <section class="border-2 border-white rounded p-10 text-gray-100 flex flex-col items-center w-full max-w-4xl  gap-6">
+      <img src="https://github.com/decqyd.png" alt="" class="rounded-full w-44 h-44" />
+      <header class="text-center flex flex-col gap-4 items-center">
+        <h1 class="text-3xl font-bold">hello, my name's daniel</h1>
+        <p class="text-lg">i'm a student studying computing, both at university and in my own time. <br/> <br/> 
+			i've basically been my own teacher since 2019, acted as the web developer for my student's union, 
+			and worked at the same company twice - once for a work placement, and the other for a summer internship. 
+			<br/><br/>
+			apart from that i've been sat on my arse and picking my nose for a couple years</p>
+      </header>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        <section id="skills" class="bg-white text-gray-900 rounded p-6">
+          <h2 class="text-xl font-semibold mb-4">skills</h2>
+          <ul class="list-disc list-inside space-y-1">
+            <li>frontend & backend development</li>
+			<li>web design</li>
+			<li>scripting</li>
+			<li>databases</li>
+			<li>version control with git</li>
+          </ul>
+        </section>
+        <section id="projects" class=" bg-white text-gray-900 rounded p-6">
+          <h2 class="text-xl font-semibold mb-4">projects</h2>
+          <ul class="list-disc list-inside space-y-1">
+            <li>this site</li>
+			<li>nothing else of note for now</li>
+          </ul>
+        </section>
+      </div>
+	  <section id="plans" class="bg-white rounded p-6 text-gray-900 w-full">
+		<h2 class="text-xl font-semibold mb-4">plans for the future</h2>
+		<ul class="list-disc list-inside space-y-1">
+		  <li>make a game using godot (idea is wip)</li>
+		  <li>minimal software time tracker with optional raspberry pi server/button</li>
+		  <li>other small hardware projects</li>
+		  <li>something in rust</li>
+	  </section>
+	  <section id="contact" class="bg-white rounded p-6 text-gray-900 	w-sm">
+		<span class="text-base font-bold">contact</span>
+		<div class="mt-4 text-sm">placeholder for now</div>
+	  </section>
+    </section>
+  </main>
+</Layout>
